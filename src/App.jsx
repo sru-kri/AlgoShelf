@@ -16,11 +16,17 @@ import HeapSort from "./modules/sorting/pages/HeapSort";
 
 // Searching Module
 import SearchingHome from "./modules/searching/pages/SearchingHome";
+import LinearSearch from "./modules/searching/pages/LinearSearch";
 
 // Linked List Module
 import SinglyLinkedList from "./modules/linked-list/pages/SinglyLinkedList";
 // Arrays Module
 import ArraysHome from "./modules/arrays/pages/ArraysHome";
+import ArrayOperations from "./modules/arrays/pages/ArrayOperations";
+
+// Linked List Module
+import LinkedListHome from "./modules/linked-list/pages/LinkedListHome";
+import LinkedListPage from "./modules/linked-list/pages/LinkedListPage";
 
 // Scroll Helper
 import ScrollToTop from "./components/ScrollToTop";
@@ -46,11 +52,19 @@ function App() {
 
         {/* Searching */}
         <Route path="/searching" element={<SearchingHome />} />
+        <Route path="/searching/linear" element={<LinearSearch />} />
 
         {/* Linked List */}
         <Route path="/linked-list" element={<SinglyLinkedList />} />
         {/* Arrays */}
         <Route path="/learn/arrays" element={<ArraysHome />} />
+        <Route path="/learn/arrays/operations" element={<ArrayOperations />} />
+
+        {/* Linked Lists */}
+        <Route path="/learn/linked-list" element={<LinkedListHome />} />
+        <Route path="/learn/linked-list/operations" element={<LinkedListPage />} />
+        <Route path="/linked-list" element={<LinkedListHome />} />
+        <Route path="/linked-list/operations" element={<LinkedListPage />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
@@ -59,6 +73,4 @@ function App() {
   );
 }
 
-
 export default App;
-
